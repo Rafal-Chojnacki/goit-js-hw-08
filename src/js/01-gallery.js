@@ -1,7 +1,7 @@
 // Add imports above this line
 import SimpleLightbox from "simplelightbox";
 console.log(SimpleLightbox);
-// import "simplelightbox/dist/simple-lightbox.min.css";
+import "simplelightbox/dist/simple-lightbox.min.css";
 import { galleryItems } from './gallery-items';
 // Change code below this line
 const gallery = document.querySelector('.gallery')
@@ -24,28 +24,8 @@ for (const image of galleryItems) {
 gallery.append(...items)
 
 
-gallery.addEventListener('click', function(e) {
-  e.preventDefault();
-  
-  if (e.target.tagName === 'IMG') {
-    const imgUrl = e.target.getAttribute('data-source');
-    const instance = basicLightbox.create(`<img src="${imgUrl}" width="100%">`,
-    {
-      onShow: (instance) => {
-        document.addEventListener('keydown', e => {
-          if (e.keyCode !== 27) { return; }
-          
-          instance.close(); 
-        });
-      },
-      onClose: (instance) => {
-        document.removeEventListener('keydown', e => {
-          if (e.keyCode !== 27) { return; }
-          instance.close(); 
-        });
-      }
-    });
-    instance.show()
-  }
-});	
-
+let lightbox = new SimpleLightbox('.gallery a', 
+{
+  captionDelay: 250,
+  captionsData: "alt"
+});
