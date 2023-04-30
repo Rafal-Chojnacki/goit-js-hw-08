@@ -9,13 +9,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Rafal-Chojnacki/goit-js-hw-08.git"
+    "url": "git+https://github.com/Rafal-Chojnacki.io/goit-js-hw-08.git"
   },
   "keywords": [],
   "author": "Rafał CHOJNACKI <bearaczek.rc@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Rafal-Chojnacki/goit-js-hw-08/issues"
+    "url": "https://github.com/Rafal-Chojnacki.io/goit-js-hw-08/issues"
   },
   "dependencies": {
     "@vimeo/player": "^2.19.0",
