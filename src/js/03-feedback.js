@@ -4,7 +4,10 @@ const submitButton = document.querySelector('button[type="submit"]');
 setInterval(() => {
   const emailValue = emailInput.value;
   const messageValue = messageInput.value;
-  const formData = { email: emailValue, message: messageValue };
+  const formData = { 
+    email: emailValue, 
+    message: messageValue 
+  };
   localStorage.setItem('feedback-form-state', JSON.stringify(formData));
 }, 500);
 
