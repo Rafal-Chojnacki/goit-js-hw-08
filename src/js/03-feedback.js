@@ -16,5 +16,10 @@ submitButton.addEventListener('click', (e) => {
   console.log(localStorage.getItem('feedback-form-state'));
   localStorage.removeItem('feedback-form-state')
   document.querySelector(".feedback-form").reset();
-  
 })
+
+if (localStorage) {
+  const feedbackForm = JSON.parse(localStorage.getItem('feedback-form-state'));
+  emailInput.value = feedbackForm.email;
+  messageInput.value = feedbackForm.message;
+}
