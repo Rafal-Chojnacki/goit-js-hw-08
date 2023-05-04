@@ -1,2 +1,0 @@
-const e=document.querySelector('input[type="email"]'),t=document.querySelector('textarea[name="message"]'),a=document.querySelector('button[type="submit"]');setInterval((()=>{const a={email:e.value,message:t.value};localStorage.setItem("feedback-form-state",JSON.stringify(a))}),500),a.addEventListener("click",(e=>{e.preventDefault(),console.log(localStorage.getItem("feedback-form-state")),localStorage.removeItem("feedback-form-state"),document.querySelector(".feedback-form").reset()}));
-//# sourceMappingURL=03-feedback.c697a1cf.js.map
